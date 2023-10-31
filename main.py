@@ -74,7 +74,7 @@ def set_limit(low):
 def get_valid_number(prompt):
     """Get valid number."""
     is_valid = False
-    while is_valid == False:
+    while not is_valid:
         try:
             number = int(input(prompt))
             is_valid = True
@@ -86,7 +86,7 @@ def get_valid_number(prompt):
 def determine_good_score(number_of_guesses, range_):
     """Determine good score."""
     if number_of_guesses <= math.ceil(math.log2(range_)):
-        return True
+        return
 
 
 def print_high_scores():
